@@ -32,9 +32,6 @@ grunt.initConfig({
             '${stylePath}' : 'test/fixtures',
             '${jsRoot}' : 'test/fixtures'
         }
-    },
-    files: {
-      'tmp/': ['test/fixtures/htmltag.ftl']
     }
   }
 })

@@ -41,9 +41,6 @@ module.exports = function (grunt) {
                 '${stylePath}' : 'test/fixtures',
                 '${jsRoot}' : 'test/fixtures'
             }
-        },
-        files: {
-          'tmp/': ['test/fixtures/htmltag.ftl']
         }
       }
     },
