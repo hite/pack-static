@@ -155,7 +155,7 @@ module.exports = function(grunt) {
             }
             content += grunt.file.read(filename);
         }
-        var newfile = dir + _newname + '_' + md5(_newname) + _matchLink.ext;
+        var newfile = dir + _newname + '_' + md5(content) + _matchLink.ext;
         grunt.file.write(newfile, content);
         // Print a success message.
         grunt.log.writeln('File "' + newfile + '" created.');
