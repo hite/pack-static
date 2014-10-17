@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     var minimatch = require("minimatch");
 
     var options = {
-        fileType: '*.ftl',
+        fileType : '**/*.ftl',
         mergeCSS : true,
         mergeJS : true,
         deployDir : 'dist/',
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                 if (!grunt.file.exists(filepath)) {
                     grunt.log.warn('Source file "' + filepath + '" not found.');
                     return false;
-                } else if (minimatch(filepath, options.fileType)) {
+                } else if (!minimatch(filepath, options.fileType)) {
                     grunt.log.warn('Source file "' + filepath + '" does\'t match fileType :' + options.fileType + ' .SKIP');
                     return false;
                 } else {

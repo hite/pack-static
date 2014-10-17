@@ -1,8 +1,7 @@
 node_modules
-
 npm-debug.log
-
 tmp
-
 *.sublime*
 dist/
+.idea/
+.git/
