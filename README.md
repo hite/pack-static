@@ -1,6 +1,6 @@
 # grunt-pack-static
 
-> compress,concat js files css filein tmpl/html directory via scanning file link in file
+> compress,concat js files css file in tmpl/html directory via scanning file link in file
 
 ## Getting Started
 This plugin requires Grunt.
@@ -31,7 +31,12 @@ grunt.initConfig({
         constVar : {
             '${stylePath}' : 'test/fixtures',
             '${jsRoot}' : 'test/fixtures'
-        }
+        },
+          files : [
+              {
+              src : 'test/fixtures/*.ftl'
+              }
+          ]
     }
   }
 })
