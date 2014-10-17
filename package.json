@@ -1,6 +1,6 @@
 {
   "name": "grunt-pack-static",
-    "version" : "0.1.2",
+    "version" : "0.1.3",
   "description": "compress,concat js files css filein tmpl/html directory via scanning file",
   "homepage": "https://github.com/hite/pack-static",
   "repository": "https://github.com/hite/pack-static",
