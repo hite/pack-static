@@ -41,7 +41,10 @@ module.exports = function (grunt) {
                 '${stylePath}' : 'test/fixtures',
                 '${jsRoot}' : 'test/fixtures'
             }
-        }
+        },
+          files : {
+              src : 'test/fixtures/*.ftl'
+          }
       }
     },
 
