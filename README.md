@@ -121,6 +121,7 @@ Meanwhile there are `c0_md5 file` files under `deployDir`.
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+@2014-11-05 add relative path  target file support `<!--cssmerge_begin:appjs/app.css-->` with `<!--cssmerge_begin:app.css-->`;
 @2014-10-16 first version released
 
 ## License

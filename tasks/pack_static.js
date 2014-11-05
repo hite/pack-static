@@ -57,7 +57,7 @@ module.exports = function(grunt) {
     
     function dispatch (_optional){
         if(_optional.isJS){
-            var jsmergeReg = new RegExp('<!--jsmerge_begin:(\\w+).js-->', 'gmi');
+            var jsmergeReg = new RegExp('<!--jsmerge_begin:([\\w|\\|\/]+).js-->', 'gmi');
             var getEndJs = function(_match){
               return '<!--jsmerge_end:' + _match + '.js-->';
             };
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                 }
             };
         }else if(_optional.isCSS){
-            var jsmergeReg = new RegExp('<!--cssmerge_begin:(\\w+).css-->', 'gmi');
+            var jsmergeReg = new RegExp('<!--cssmerge_begin:([\\w|\\|\/]+).css-->', 'gmi');
             var getEndJs = function(_match){
               return '<!--cssmerge_end:' + _match + '.css-->';
             };

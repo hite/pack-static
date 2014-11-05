@@ -51,7 +51,9 @@
             <meta name="apple-mobile-web-app-status-bar-style" content="gray"/>
             <title>邮箱大师推荐人计划</title>
             <#if appjs>
+            <!--cssmerge_begin:appjs/app.css-->
             <link href="${stylePath}/appjs/app.css" rel="stylesheet" type="text/css"/>
+            <!--cssmerge_end:appjs/app.css-->
             </#if>
             <!--cssmerge_begin:core.css-->
             <link href="${stylePath}/123.css" rel="stylesheet" type="text/css"/>

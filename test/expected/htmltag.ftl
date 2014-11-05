@@ -51,10 +51,12 @@
             <meta name="apple-mobile-web-app-status-bar-style" content="gray"/>
             <title>邮箱大师推荐人计划</title>
             <#if appjs>
-            <link href="${stylePath}/appjs/app.css" rel="stylesheet" type="text/css"/>
+            <!--cssmerge_begin:appjs/app.css-->
+<link href="dist/appjs/app_f428dde54a3a5e6df7c1788490e90bb3.css" rel="stylesheet" type="text/css"/>
+<!--cssmerge_end:appjs/app.css-->
             </#if>
             <!--cssmerge_begin:core.css-->
-<link href="dist/core_a74ad8dfacd4f985eb3977517615ce25.css" rel="stylesheet" type="text/css"/>
+<link href="dist/core_6a003f0e4118bfb4dc9a3b6089edf352.css" rel="stylesheet" type="text/css"/>
 <!--cssmerge_end:core.css-->
             <!--[if IE]>
             <script>
@@ -88,7 +90,7 @@
                 </div>
             </div>
             <!--jsmerge_begin:c0.js-->
-<script type="text/javascript" src="dist/c0_b0fce403c178fa57404c1cc4176547a8.js"></script>
+<script type="text/javascript" src="dist/c0_6a003f0e4118bfb4dc9a3b6089edf352.js"></script>
 <!--jsmerge_end:c0.js-->
 
             <script type="text/javascript">
