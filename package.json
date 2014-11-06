@@ -1,6 +1,6 @@
 {
   "name": "grunt-pack-static",
-    "version" : "0.1.5",
+  "version": "0.2.0",
   "description": "compress,concat js files css filein tmpl/html directory via scanning file",
   "homepage": "https://github.com/hite/pack-static",
   "repository": "https://github.com/hite/pack-static",
@@ -17,9 +17,10 @@
     "node": ">= 0.8.0"
   },
   "license": "MIT",
-  "dependencies":{
+  "dependencies": {
     "minimatch": "^1.0.0",
-    "crypto": "0.0.3"
+    "crypto": "0.0.3",
+    "uglify-js": "^2.4.15"
   },
   "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",

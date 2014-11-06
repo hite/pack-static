@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         fileType : '**/*.ftl',
         mergeCSS : true,
         mergeJS : true,
+        mingle : false,
         deployDir : 'dist/',
         constVar : {
           '${stylePath}' : '.',
@@ -35,7 +36,7 @@ module.exports = function(grunt) {
             // Concat specified files.
             var src = file.src.filter(function(filepath) {
                 grunt.log.error(filepath);
-                    // Warn on and remove invalid source files (if nonull was set).
+                // Warn on and remove invalid source files (if nonull was set).
                 if (!grunt.file.exists(filepath)) {
                     grunt.log.warn('Source file "' + filepath + '" not found.');
                     return false;
@@ -102,10 +103,11 @@ module.exports = function(grunt) {
         if(options.mergeCSS){
             source =  replace(source,{isCSS:true});
         }
+
         // clear clean
         var newfile = options.deployDir + _filepath;
         grunt.file.write(newfile, source);
-        grunt.log.writeln('File "' + newfile + '" copied.');
+        grunt.log.writeln('File "' + newfile + '" fixed.');
         return  source;
     }
     //
@@ -156,6 +158,15 @@ module.exports = function(grunt) {
             content += grunt.file.read(filename);
         }
         var newfile = dir + _newname + '_' + md5(content) + _matchLink.ext;
+        if(_matchLink.ext == '.js' && options.mingle){
+            var UglifyJS = require("uglify-js");
+            try{
+                content = UglifyJS.minify(content, {fromString: true});
+            }catch(e){
+                grunt.log.error('uglify-js failed ')
+                console.log(e)
+            }
+        }
         grunt.file.write(newfile, content);
         // Print a success message.
         grunt.log.writeln('File "' + newfile + '" created.');

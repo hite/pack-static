@@ -36,11 +36,12 @@ module.exports = function (grunt) {
       custom_options: {
         options: {
           separator: ';',
-            fileType : '**/*.ftl',
-            constVar : {
-                '${stylePath}' : 'test/fixtures',
-                '${jsRoot}' : 'test/fixtures'
-            }
+          mingle: true,
+          fileType : '**/*.ftl',
+          constVar : {
+              '${stylePath}' : 'test/fixtures',
+              '${jsRoot}' : 'test/fixtures'
+          }
         },
           files : [
               {
