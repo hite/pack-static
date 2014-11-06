@@ -161,7 +161,7 @@ module.exports = function(grunt) {
         if(_matchLink.ext == '.js' && options.mingle){
             var UglifyJS = require("uglify-js");
             try{
-                content = UglifyJS.minify(content, {fromString: true});
+                content = UglifyJS.minify(content, {fromString: true}).code;
             }catch(e){
                 grunt.log.error('uglify-js failed ')
                 console.log(e)
